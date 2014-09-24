@@ -6,7 +6,7 @@ using System.Text;
 public abstract class Slot
 {
     public DateTime Allocated_Start { get; set; }
-    DateTime Allocated_Finish { get; set; }
+    public DateTime Allocated_Finish { get; set; }
     String Description { get; set; }
 
     public Slot(DateTime Start, DateTime Finish, String Description = null)
@@ -22,4 +22,12 @@ public abstract class Slot
         this.Allocated_Finish = Finish;
         this.Description = Description;
     }
+
+    public int Duration()
+    {
+        return Allocated_Finish.Subtract(Allocated_Start).Minutes;
+
+    }
+
+
 }

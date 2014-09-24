@@ -8,7 +8,7 @@ namespace ConsoleApplication1
     class Manager : Resource
     {
         
-       public Manager(int IdManager, string _Name, int _NumHours) : base (IdManager, _Name, _NumHours)
+       public Manager(int idManager, string name, int numHours) : base (idManager, name, numHours)
         {
               List<Employee> EmployeesList = new List<Employee>();
         }
