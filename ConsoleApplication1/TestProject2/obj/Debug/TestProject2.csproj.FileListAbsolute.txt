@@ -1,0 +1,5 @@
+C:\Users\Administrator\Documents\GitHub\Proj_c\ConsoleApplication1\TestProject2\bin\Debug\TestProject2.dll
+C:\Users\Administrator\Documents\GitHub\Proj_c\ConsoleApplication1\TestProject2\bin\Debug\TestProject2.pdb
+C:\Users\Administrator\Documents\GitHub\Proj_c\ConsoleApplication1\TestProject2\obj\Debug\TestProject2.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\Proj_c\ConsoleApplication1\TestProject2\obj\Debug\TestProject2.dll
+C:\Users\Administrator\Documents\GitHub\Proj_c\ConsoleApplication1\TestProject2\obj\Debug\TestProject2.pdb

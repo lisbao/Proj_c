@@ -10,6 +10,10 @@ namespace ConsoleApplication1
         DateTime Done_Start { get; set; }
         DateTime Done_Finish { get; set; }
 
+           public Work(DateTime Start, DateTime Finish, String Description = null) : base( Start, Finish, Description)
+        {
+           
+        }
         public override void UpdateSlot(DateTime Start, DateTime Finish, string Desc)
         {
             base.UpdateSlot(Done_Start, Done_Finish, Desc = null);

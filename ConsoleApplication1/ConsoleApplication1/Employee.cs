@@ -7,7 +7,7 @@ namespace ConsoleApplication1
 {
     class Employee : Resource
     {
-        public Employee( int idEmployee, string name, int numHours) :base (idEmployee, name, numHours)
+        public Employee( int idEmployee, string name, int numHours) : base (idEmployee, name, numHours)
         {
                       
         }
