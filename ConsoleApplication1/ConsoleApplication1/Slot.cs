@@ -3,31 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public abstract class Slot
+namespace ConsoleApplication1
 {
-    public DateTime Allocated_Start { get; set; }
-    public DateTime Allocated_Finish { get; set; }
-    String Description { get; set; }
-
-    public Slot(DateTime Start, DateTime Finish, String Description = null)
+    public abstract class Slot
     {
-        this.Allocated_Start = Start;
-        this.Allocated_Finish = Finish;
-        this.Description = Description;
+        public DateTime Allocated_Start { get; set; }
+        public DateTime Allocated_Finish { get; set; }
+        String Description { get; set; }
+
+        public Slot(DateTime Start, DateTime Finish, String Description = null)
+        {
+            this.Allocated_Start = Start;
+            this.Allocated_Finish = Finish;
+            this.Description = Description;
+        }
+
+        public virtual void UpdateSlot(DateTime Start, DateTime Finish, String Description)
+        {
+            this.Allocated_Start = Start;
+            this.Allocated_Finish = Finish;
+            this.Description = Description;
+        }
+
+        public virtual TimeSpan Duration()
+        {
+            return Allocated_Finish.Subtract(Allocated_Start);
+        }
     }
-
-    public virtual void UpdateSlot(DateTime Start, DateTime Finish, String Description)
-    {
-        this.Allocated_Start = Start;
-        this.Allocated_Finish = Finish;
-        this.Description = Description;
-    }
-
-    public TimeSpan Duration()
-    {
-        return Allocated_Finish.Subtract(Allocated_Start);
-
-    }
-
-
 }
