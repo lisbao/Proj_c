@@ -28,20 +28,17 @@ namespace ConsoleApplication1
         
         }
 
-        public IEnumerable<Tuple<Resource, int>> GetWorkingTimeBy(DateTime date)
+        public IEnumerable<Tuple<Resource, int>> GetWorkingTimeByMinutes(DateTime date)
         {
             foreach (var resource in Resources)
             {
                int time = resource.Value.Calendar
                     .FilterBy((t) => t.Allocated_Start.Date == date.Date && 
                      t.GetType().Name == "Work")
-                    .Sum((t) => t.Duration());
+                    .Sum((t) => t.Duration().Minutes);
 
                yield return new Tuple<Resource, int>(resource.Value,time);
-            }
-
-            
-            
+            }      
         }
         
 
