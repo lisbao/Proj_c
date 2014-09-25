@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ConsoleApplication1
 {
-    class DateComparer : IComparer<Slot>
+    public class DateComparer : IComparer<Slot>
     {
         public int Compare(Slot x, Slot y)
         {

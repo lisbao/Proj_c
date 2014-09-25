@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="174b029b-8bbc-466a-bb9d-a8d19ac2bb74" name="Administrator@SO82 2014-09-25 16:45:13" runUser="SANDBOX\Administrator" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="01ed233b-4a33-4391-b07f-18159bc5b228">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Administrator_SO82 2014-09-25 16_45_13">
+      <DeploymentItem filename="C:\Users\Administrator\Documents\GitHub\Proj_c\ConsoleApplication1\packages\NUnit.2.6.3\lib\nunit.framework.dll" />
+      <DeploymentItem filename="C:\Users\Administrator\Documents\GitHub\Proj_c\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-09-25T16:45:13.4855430+01:00" queuing="2014-09-25T16:45:13.5324180+01:00" start="2014-09-25T16:45:13.7042930+01:00" finish="2014-09-25T16:45:14.0949180+01:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Duration" storage="c:\users\administrator\documents\github\proj_c\consoleapplication1\consoleapplication1_test\bin\debug\consoleapplication1_test.dll" id="6beddc81-680e-aeee-17ee-41584a5ba212">
+      <Execution id="63a1b131-a0a1-48a1-b5e5-acf604f6171d" />
+      <TestMethod codeBase="C:/Users/Administrator/Documents/GitHub/Proj_c/ConsoleApplication1/ConsoleApplication1_Test/bin/Debug/ConsoleApplication1_Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ConsoleApplication1_Test.TestSlot, ConsoleApplication1_Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Duration" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="6beddc81-680e-aeee-17ee-41584a5ba212" executionId="63a1b131-a0a1-48a1-b5e5-acf604f6171d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="63a1b131-a0a1-48a1-b5e5-acf604f6171d" testId="6beddc81-680e-aeee-17ee-41584a5ba212" testName="Duration" computerName="SO82" duration="00:00:00.0450380" startTime="2014-09-25T16:45:13.7511680+01:00" endTime="2014-09-25T16:45:13.9542930+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="63a1b131-a0a1-48a1-b5e5-acf604f6171d">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method ConsoleApplication1_Test.TestSlot.Duration threw exception: 
+NUnit.Framework.AssertionException:   Expected: 8
+  But was:  0
+</Message>
+          <StackTrace>    at NUnit.Framework.Assert.That(Object actual, IResolveConstraint expression, String message, Object[] args)
+   at NUnit.Framework.Assert.AreEqual(Int32 expected, Int32 actual)
+   at ConsoleApplication1_Test.TestSlot.Duration() in C:\Users\Administrator\Documents\GitHub\Proj_c\ConsoleApplication1\ConsoleApplication1_Test\TestSlot.cs:line 23
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

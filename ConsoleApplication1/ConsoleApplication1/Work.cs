@@ -14,14 +14,34 @@ namespace ConsoleApplication1
         {
            
         }
+
+        
         public override void UpdateSlot(DateTime Start, DateTime Finish, string Desc)
         {
             base.UpdateSlot(Done_Start, Done_Finish, Desc = null);
+          }
+
+        public void SetDoneTime(DateTime start, DateTime finish)
+        {
+            Done_Start = start;
+            Done_Finish = finish;
+        
         }
 
         public override TimeSpan Duration()
         {
             return Done_Finish.Subtract(Done_Start);
+        }
+
+        public TimeSpan GetAllocatedTime()
+        {
+            return Allocated_Finish.Subtract(Allocated_Start);
+        }
+
+        public TimeSpan CompareTimes()
+        {
+            return GetAllocatedTime().Subtract(Duration());
+        
         }
 
     }

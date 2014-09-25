@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ConsoleApplication1
 {
-   abstract class Resource
+  public abstract class Resource
     {
         public int _id_Resource;
         public string _name;

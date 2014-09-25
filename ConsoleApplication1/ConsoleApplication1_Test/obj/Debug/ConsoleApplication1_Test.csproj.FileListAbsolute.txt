@@ -1,0 +1,9 @@
+C:\Users\Administrator\Documents\GitHub\Proj_c\ConsoleApplication1\ConsoleApplication1_Test\obj\Debug\ConsoleApplication1_Test.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\Proj_c\ConsoleApplication1\ConsoleApplication1_Test\bin\Debug\ConsoleApplication1_Test.dll
+C:\Users\Administrator\Documents\GitHub\Proj_c\ConsoleApplication1\ConsoleApplication1_Test\bin\Debug\ConsoleApplication1_Test.pdb
+C:\Users\Administrator\Documents\GitHub\Proj_c\ConsoleApplication1\ConsoleApplication1_Test\bin\Debug\ConsoleApplication1.exe
+C:\Users\Administrator\Documents\GitHub\Proj_c\ConsoleApplication1\ConsoleApplication1_Test\bin\Debug\nunit.framework.dll
+C:\Users\Administrator\Documents\GitHub\Proj_c\ConsoleApplication1\ConsoleApplication1_Test\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Administrator\Documents\GitHub\Proj_c\ConsoleApplication1\ConsoleApplication1_Test\bin\Debug\nunit.framework.xml
+C:\Users\Administrator\Documents\GitHub\Proj_c\ConsoleApplication1\ConsoleApplication1_Test\obj\Debug\ConsoleApplication1_Test.dll
+C:\Users\Administrator\Documents\GitHub\Proj_c\ConsoleApplication1\ConsoleApplication1_Test\obj\Debug\ConsoleApplication1_Test.pdb

@@ -6,10 +6,10 @@ using System.Collections;
 
 namespace ConsoleApplication1
 {
-    class Calendar
+   public class Calendar
     {
 
-        SortedSet<Slot> slots = new SortedSet<Slot>(new DateComparer());
+      public  SortedSet<Slot> slots = new SortedSet<Slot>(new DateComparer());
 
         public IEnumerable<Slot> FilterBy(Func<Slot,bool> Query)
         {
