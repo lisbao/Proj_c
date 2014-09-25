@@ -3,22 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-
-public class Work : Slot
+namespace ConsoleApplication1
 {
-    DateTime Done_Start { get; set; }
-    DateTime Done_Finish { get; set; }
-
-    public override void UpdateSlot(DateTime Start, DateTime Finish, string type, string Desc)
+    public class Work : Slot
     {
-        base.UpdateSlot(Done_Start, Done_Finish, type = null, Desc = null);
-    }
+        DateTime Done_Start { get; set; }
+        DateTime Done_Finish { get; set; }
 
-    public override int Duration()
-    {
-        return Done_Finish.Subtract(Done_Start);
-    }
+        public override void UpdateSlot(DateTime Start, DateTime Finish, string Desc)
+        {
+            base.UpdateSlot(Done_Start, Done_Finish, Desc = null);
+        }
 
+        public override TimeSpan Duration()
+        {
+            return Done_Finish.Subtract(Done_Start);
+        }
+
+    }
 }
 
 
