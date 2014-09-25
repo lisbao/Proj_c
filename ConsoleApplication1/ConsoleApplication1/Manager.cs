@@ -13,9 +13,9 @@ namespace ConsoleApplication1
               List<Employee> EmployeesList = new List<Employee>();
         }
 
-        public Employee GetEmployee(int IdEmployee)
-        { 
+        //public Employee GetEmployee(int IdEmployee)
+        //{ 
             
-        }
+        //}
     }
 }

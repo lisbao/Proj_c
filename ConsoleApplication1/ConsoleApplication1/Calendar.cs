@@ -17,17 +17,36 @@ namespace ConsoleApplication1
         
         }
 
-
-        public int GetTime(Func<Slot, bool> query)
+        public IEnumerable<Slot> FilterByType(string type)
         {
-            IEnumerable slotsSet = FilterBy(query);
-            int count = 0;
-            foreach (Slot e in slotsSet)
-            {
-                count += e.Allocated_Finish.Subtract(e.Allocated_Start).Hours;
-            }
-            return count;
+            return FilterBy((t) => t.GetType().Name == type);
         }
+
+        public IEnumerable<Slot> FilterByDateAndType(DateTime date_start, DateTime date_finish, string type)
+        {
+            return FilterBy((t) => t.Allocated_Start.Date >= date_start.Date &&
+                            t.Allocated_Finish.Date <= date_finish.Date &&
+                            t.GetType().Name == type);
+        }
+
+        public int GetMinutesByType(DateTime date_start, DateTime date_finish, string type)
+        {
+            return FilterByDateAndType(date_start, date_finish, type).Sum((t) => t.Duration().Minutes);
+        }
+
+        public int GetHoursByType(DateTime date_start, DateTime date_finish, string type)
+        {
+
+            return FilterByDateAndType(date_start, date_finish, type).Sum((t) => t.Duration().Hours);
+        }
+
+        public int GetDaysByType(DateTime date_start, DateTime date_finish, string type)
+        {
+
+            return FilterByDateAndType(date_start, date_finish, type).Sum((t) => t.Duration().Days);
+        }
+
+       
 
       }
 

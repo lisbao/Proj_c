@@ -23,9 +23,9 @@ public abstract class Slot
         this.Description = Description;
     }
 
-    public int Duration()
+    public TimeSpan Duration()
     {
-        return Allocated_Finish.Subtract(Allocated_Start).Minutes;
+        return Allocated_Finish.Subtract(Allocated_Start);
 
     }
 

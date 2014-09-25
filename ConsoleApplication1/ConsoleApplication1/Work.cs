@@ -14,6 +14,11 @@ public class Work : Slot
         base.UpdateSlot(Done_Start, Done_Finish, type = null, Desc = null);
     }
 
+    public override int Duration()
+    {
+        return Done_Finish.Subtract(Done_Start);
+    }
+
 }
 
 
