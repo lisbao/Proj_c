@@ -46,9 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Absence.cs" />
     <Compile Include="Calendar.cs" />
     <Compile Include="DateComparer.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="IOStreamReader.cs" />
     <Compile Include="Manager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

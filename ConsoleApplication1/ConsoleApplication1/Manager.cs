@@ -5,17 +5,25 @@ using System.Text;
 
 namespace ConsoleApplication1
 {
-    class Manager : Resource
+    public class Manager : Resource
     {
+       public List<Employee> EmployeesList;
         
        public Manager(int idManager, string name, int numHours) : base (idManager, name, numHours)
         {
-              List<Employee> EmployeesList = new List<Employee>();
+              EmployeesList = new List<Employee>();
         }
 
-        //public Employee GetEmployee(int IdEmployee)
-        //{ 
-            
-        //}
+        public Employee GetEmployee(int IdEmployee)
+        {
+            foreach (var Employee in EmployeesList)
+            {
+                if (Employee._id_Resource == IdEmployee)
+                    return Employee;
+            }
+            return null;
+        }
+
+
     }
 }
