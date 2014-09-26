@@ -29,6 +29,21 @@ namespace ConsoleApplication1
                             t.GetType().Name == type);
         }
 
+        public IEnumerable<Absence> FilterAbsences(DateTime date_start, DateTime date_finish)
+        {
+            IEnumerable<Absence> a = (IEnumerable<Absence>)FilterBy((t) => t.Allocated_Start.Date >= date_start.Date &&
+                            t.Allocated_Finish.Date <= date_finish.Date &&
+                            t.GetType().Name == "Absence");
+
+            return a;
+        }
+
+        public IEnumerable<Absence> FilterAbsenceByType(Absence.AbsenceType type, DateTime date_start, DateTime date_finish)
+        {
+            IEnumerable<Absence> a = FilterAbsences(date_start, date_finish);
+            return a.Where((t) => t._type == type);
+        }
+
         public int GetMinutesByType(DateTime date_start, DateTime date_finish, string type)
         {
             return FilterByDateAndType(date_start, date_finish, type).Sum((t) => t.Duration().Minutes);
