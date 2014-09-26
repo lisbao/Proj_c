@@ -26,22 +26,37 @@ namespace ConsoleApplication1
         {
             return FilterBy((t) => t.Allocated_Start.Date >= date_start.Date &&
                             t.Allocated_Finish.Date <= date_finish.Date &&
-                            t.GetType().Name == type);
+                            t.GetType().Name == type);            
         }
 
-        public IEnumerable<Absence> FilterAbsences(DateTime date_start, DateTime date_finish)
+        public List<Absence> FilterAbsences(DateTime date_start, DateTime date_finish)
         {
-            IEnumerable<Absence> a = (IEnumerable<Absence>)FilterBy((t) => t.Allocated_Start.Date >= date_start.Date &&
+            IEnumerable<Slot> slots =  FilterBy((t) => t.Allocated_Start.Date >= date_start.Date &&
                             t.Allocated_Finish.Date <= date_finish.Date &&
                             t.GetType().Name == "Absence");
 
-            return a;
+            List<Absence> list = new List<Absence>();
+            foreach (Slot s in slots)
+            {
+                list.Add((Absence)s);
+            }
+
+            return list;
+
         }
 
-        public IEnumerable<Absence> FilterAbsenceByType(Absence.AbsenceType type, DateTime date_start, DateTime date_finish)
+        public List<Absence> FilterAbsenceByType(Absence.AbsenceType type, DateTime date_start, DateTime date_finish)
         {
-            IEnumerable<Absence> a = FilterAbsences(date_start, date_finish);
-            return a.Where((t) => t._type == type);
+            List<Absence> a = FilterAbsences(date_start, date_finish);
+            List<Absence> ab = new List<Absence>();
+            foreach (Absence s in a)
+            {
+                if (s._type == type)
+                {
+                    ab.Add((Absence)s);
+                }
+            }
+            return ab;
         }
 
         public int GetMinutesByType(DateTime date_start, DateTime date_finish, string type)
