@@ -9,9 +9,15 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            ResourceManagement res = new ResourceManagement();
+          
+            IOStreamReader sr = new IOStreamReader("dbinitial.xml");
+            sr.createDB();
+            sr.Load();
+           
+            
+            Console.WriteLine("Criou a DB");
 
-            Employee r = new Employee(res.Increment(), "João", 8);
+            ResourceManagement res = new ResourceManagement();
         }
     }
 }

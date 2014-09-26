@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ConsoleApplication1
 {
-    class ResourceManagement
+    public  class ResourceManagement
     {
         int IdCount {get; set;}
         Dictionary<int,Resource> Resources {get; set;}
