@@ -59,5 +59,6 @@ namespace ConsoleApplication1
         {
             return Calendar.GetHoursByType(start, finish, "Work");
         }
+
     }
 }

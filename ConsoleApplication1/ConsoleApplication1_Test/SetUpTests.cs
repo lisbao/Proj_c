@@ -19,14 +19,14 @@ namespace ConsoleApplication1_Test
             calendar = new Calendar();
             for (int i = 0; i < 10; i++)
             {
-                DateTime date_start = DateTime.Now.AddHours(new Random().Next(20));
-                DateTime date_finish = DateTime.Now.AddHours(new Random().Next(20));
+                DateTime date_start = DateTime.Now.AddHours(i);
+                DateTime date_finish = DateTime.Now.AddHours(i+1);
                 Work slot = new Work(date_start, date_finish, "trabalho feito");
 
                 slot.SetDoneTime(date_start, date_finish);
 
-                DateTime dstart = DateTime.Now.AddHours(new Random().Next(30, 40));
-                DateTime dfinish = DateTime.Now.AddHours(new Random().Next(30, 40));
+                DateTime dstart = DateTime.Now.AddHours(i);
+                DateTime dfinish = DateTime.Now.AddHours(i+1);
                 Work slot_1 = new Work(dstart, dfinish, "trabalharam mais");
 
                 slot_1.SetDoneTime(dstart, dfinish);
