@@ -13,6 +13,7 @@ namespace ConsoleApplication1
         {
               EmployeesList = new List<Employee>();
         }
+       public Manager() { }
 
         public Employee GetEmployee(int IdEmployee)
         {

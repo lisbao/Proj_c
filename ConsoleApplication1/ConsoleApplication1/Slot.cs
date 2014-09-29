@@ -7,6 +7,7 @@ namespace ConsoleApplication1
 {
     public abstract class Slot
     {
+        public Slot() { }
         public DateTime Allocated_Start { get; set; }
         public DateTime Allocated_Finish { get; set; }
         String Description { get; set; }

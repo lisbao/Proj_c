@@ -10,6 +10,7 @@ namespace ConsoleApplication1
         int IdCount {get; set;}
         Dictionary<int,Resource> Resources {get; set;}
 
+        public ResourceManagement() { }
         public ResourceManagement()
         {
             Resources = new Dictionary<int,Resource>();

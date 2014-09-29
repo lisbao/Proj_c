@@ -12,7 +12,7 @@ namespace ConsoleApplication1
 
         }
 
-
+        public Employee() { }
 
     }
 }

@@ -8,7 +8,7 @@ namespace ConsoleApplication1
 {
    public class Calendar
     {
-
+       public Calendar() { }
       public  SortedSet<Slot> slots = new SortedSet<Slot>(new DateComparer());
 
         public IEnumerable<Slot> FilterBy(Func<Slot,bool> Query)
